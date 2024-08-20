@@ -2,6 +2,7 @@ import FeatureCard from "@/components/FeatureCard";
 import PriceCard from "@/components/PriceCard";
 import getstripe from "@/utils/get-stripe";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import Link from "next/link";
 export default function Home() {
   const data = [
     {
@@ -53,9 +54,12 @@ export default function Home() {
       <div className=" mt-48">
         <p className=" text-3xl font-bold">Welcome to flashcard SaaS</p>
         <p>your best flashcard generator </p>
-        <button className=" p-2 bg-blue-500 text-white transition hover:bg-blue-700 rounded mt-2">
+       
+       <Link href="/generate">
+       <button className=" p-2 bg-blue-500 text-white transition hover:bg-blue-700 rounded mt-2">
           Get Started
         </button>
+       </Link> 
       </div>
       <div>
         <p className=" font-bold text-xl mt-4">Features</p>
