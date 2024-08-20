@@ -16,7 +16,6 @@ export async function POST(req: NextRequest) {
   }
 
   const params: Stripe.Checkout.SessionCreateParams = {
-    submit_type: 'subscription',
     payment_method_types: ["card"],
     line_items: [
       {
