@@ -30,9 +30,19 @@ return in the following JSON format
 }
 `
     const prompt=systemprompt
-    const result=await model.generateContent(prompt);
-    const response=await result.response;
-    const text=response.text()
-    return NextResponse.json(text)
+    const result=await model.generateContent({
+        contents:[
+            {
+                role:'model',
+                parts:[{text:prompt}]
+            },
+            {
+                role:'user',
+                parts:[{text:data}]
+            }
+        ]
+    });
+    const flashcard=JSON.parse(result.response)
+    return NextResponse.json(flashcard.flashcard)
 }
 
