@@ -3,10 +3,16 @@
 @tailwind utilities;
 
 body{
-  background-color: rgb(18, 18, 18);
+  background-image: url('/back.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: aliceblue;
 }
-
+::-webkit-scrollbar{
+  display: none;
+}
 .perspective {
   perspective: 1000px;
 }

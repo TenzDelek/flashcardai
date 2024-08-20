@@ -44,7 +44,7 @@ const Page: React.FC = () => {
   }
 
   if (!isLoaded || !isSignedIn) {
-    return <div>Loading...</div>
+    return <div className=" flex items-center justify-center w-full h-screen">Loading...</div>
   }
 
   return (
@@ -73,7 +73,7 @@ const Page: React.FC = () => {
           {flashcards.map((card, index) => (
             <div
               key={index}
-              className="bg-black w-full h-48 cursor-pointer perspective"
+              className="bg-black/10 backdrop-blur-lg  rounded-lg  border-white/40 shadow-lg border w-full h-48 cursor-pointer perspective"
               onClick={() => handleFlip(index)}
             >
               <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flipped[index] ? 'rotate-y-180' : ''}`}>
@@ -81,7 +81,7 @@ const Page: React.FC = () => {
                   <div className="font-bold mb-2">Question:</div>
                   <div>{card.front}</div>
                 </div>
-                <div className="absolute w-full h-full backface-hidden bg-black p-4 rounded-lg shadow-md flex flex-col justify-center rotate-y-180">
+                <div className="absolute w-full h-full backface-hidden bg-white/10 backdrop-blur-lg  border-white/40  border p-4 rounded-lg shadow-md flex flex-col justify-center rotate-y-180">
                   <div className="font-bold mb-2">Answer:</div>
                   <div>{card.back}</div>
                 </div>

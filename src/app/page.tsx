@@ -51,18 +51,19 @@ export default function Home() {
   ]
   return (
     <main className=" flex-col flex items-center justify-center w-full">
-      <div className=" mt-48">
-        <p className=" text-3xl font-bold">Welcome to flashcard SaaS</p>
-        <p>your best flashcard generator </p>
-       
-       <Link href="/generate">
-       <button className=" p-2 bg-blue-500 text-white transition hover:bg-blue-700 rounded mt-2">
-          Get Started
-        </button>
-       </Link> 
-      </div>
+     <div className=" flex  flex-col w-full mt-48 py-6  px-16 ">
+  <p className="text-3xl font-bold">Welcome to flashcard SaaS</p>
+  <p>your best flashcard generator</p>
+
+  <Link href="/generate">
+    <button className="p-2 bg-blue-500 text-white transition hover:bg-blue-700 rounded mt-2">
+      Get Started
+    </button>
+  </Link>
+</div>
+
       <div>
-        <p className=" font-bold text-xl mt-4">Features</p>
+        <p className=" font-bold text-xl mb-4 mt-4">Features</p>
         <div className=" grid gap-2 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
           {data.map((item, index) => (
             <div key={index}>
