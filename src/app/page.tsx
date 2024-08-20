@@ -35,17 +35,17 @@ export default function Home() {
     {
       tier:"Free",
       price:0,
-      benefit:"limited acess"
+      benefit:"for broke devs"
     },
     {
-      tier:"God",
+      tier:"Not Free",
       price:10,
       benefit:"not bad but not good"
     },
     {
       tier:"BhaiChara",
       price:100,
-      benefit:"Best for your student,your friend"
+      benefit:"Support your Dev Friends"
     },
 
   ]
